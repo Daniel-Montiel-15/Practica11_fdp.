@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main () 
+{
+int x,y;
+
+printf("¿De cuantos renglones sera tu matriz?:");
+scanf("%i",&x);
+
+  printf("¿De cuantas columnas sera tu matriz?");
+  scanf("%i",&y);
+  
+  	#define r =("%i",x)
+	#define c =("%i",y)
+	
+		int a[100][100],z,k;
+	printf("matriz_1 [%i][%i]",x,y);
+	
+	for(z=1;z<=x;z++)//renglones
+	   for(k=1;k<=y;k++)//columnas
+	{
+		printf("\n introducir valor de [%i][%i] :",z,k);
+		scanf("%d",&a[z][k]);
+	}
+	system("cls");
+	
+	for(z=1;z<=x;z++)//renglones
+	  for(k=1;k<=y;k++)//columnas
+	{
+	    printf("%i ", a[z][k]);
+	    /*Todo lo anterior simplemente lo copie del codigo de multiplicacion de matrices,
+		lo unico que cambie fue la forma de imprimir la matriz,
+		sustituyendo en el siguiente printf la letra n por v*/
+	      printf(" \v ");
+	}
+	system ("pause");
+}
